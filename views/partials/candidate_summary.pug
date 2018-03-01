@@ -1,0 +1,51 @@
+div#candidateSumary(v-cloak, v-if="store.state.view_mode == 'CANDIDATE-SUMMARY' && store.state.candidate")
+    div(class="panel panel-default")
+        div(class="panel-heading")
+            h4 Candidate/Student Record # {{store.state.candidate.admissionNumber}}
+        div(class="panel-body")
+            div(class="row")
+                div(class="col-4")
+                    div(class="form-group")
+                    label Admission Number
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.admissionNumber")
+
+                div(class="col-4")
+                    div(class="form-group")
+                    label Name
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.name")
+
+                div(class="col-4")
+                    div(class="form-group")
+                    label ID Number
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.idNumber")
+
+            div(class="row")
+                div(class="col-4")
+                    div(class="form-group")
+                    label Fees Paid
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.totalFeesPaid")
+
+                div(class="col-4")
+                    div(class="form-group")
+                    label Passed Units
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.passedUnits")
+
+                div(class="col-4")
+                    div(class="form-group")
+                    label Cleared
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.clearedByAdmin")
+
+            div(class="row")
+                div(class="col-12")
+                    div(class="form-group")
+                    label Admission Date
+                    input(type="text" class="form-control-plaintext" disabled :value="store.state.candidate.admissionDate|toDate")
+
+            div(class="row")
+                div(class="col-12")
+                    div(class="form-group")
+                    label Certificate
+                    p(v-if="store.state.candidate.certificate && store.state.candidate.certificate !=='Processing..'")
+                      a(:href="'https://gateway.ipfs.io/ipfs/'+store.state.candidate.certificate", target="_blank") View Cert  # {{store.state.candidate.certificate}}  
+                    p(v-if="store.state.candidate.certificate && store.state.candidate.certificate ==='Processing..'") Processing
+                    

@@ -1,0 +1,26 @@
+div#staffActions(v-cloak)
+    div(class="row")
+      div(class="col-12 text-right my-2")
+        button(class="btn btn-primary btn-sm" @click="setViewMode('MANAGE')" v-if="store.state.view_mode !='MANAGE'")
+          i(class="fa fa-pencil")
+          span Manage records
+    
+    div#manageView(v-if="store.state.view_mode == 'MANAGE' && store.state.user")
+      div#formSection(class="my-2")
+        ul(class="nav nav-pills flex-column flex-sm-row")
+          a(href="javascript:;" class="flex-sm-fill text-sm-center nav-link" :class="{'active': action_item.value == action.value}" @click="selectAction(action_item)" v-for="action_item in actions") {{action_item.name}}
+
+      div#actionsPanel(v-if="action.value")
+        candidates#candidatesContainer(v-if="action.value == 'CANDIDATES'")
+        staffs#staffsContainer(v-if="action.value == 'STAFFS'")
+        admin-clearance-form(v-if="action.value == 'ADMIN-CLEARANCE'")
+        programs#programsContainer(v-if="action.value == 'PROGRAMS'")
+        update-fees-form(v-if="action.value == 'FEES'")
+    
+      div#emptyActionPanel(v-if="!action.value && store.state.view_mode == 'MANAGE'")
+        div(class="alert alert-info")
+          p Select allowed management action above to get started. 
+
+    div#emptyUserView(v-if="!store.state.user")
+      div(class="alert alert-warning")
+        p You must activate a staff account to continue. Click 'Choose account' above to get started.

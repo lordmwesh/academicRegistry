@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(
+      rel='stylesheet', 
+      href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css'
+      integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" 
+      crossorigin="anonymous"
+    )
+    link(rel="stylesheet", href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='wrapper row')
+      div(class='main-content col-12')
+        block content
+    

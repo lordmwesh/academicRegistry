@@ -1,0 +1,168 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+html .wrapper,
+body .wrapper {
+  height: 100%;
+  margin: 0;
+}
+html .wrapper .sidebar,
+body .wrapper .sidebar {
+  height: 100%;
+  background: #3949AB;
+  color: #FFF;
+}
+html .wrapper .main-content,
+body .wrapper .main-content {
+  height: 100%;
+}
+html .wrapper .explorer,
+body .wrapper .explorer {
+  height: 100%;
+  background: #4527A0;
+  margin: 0;
+}
+html [v-cloak],
+body [v-cloak] {
+  display: none;
+}
+.panel {
+  border: 1px solid #ECECEC;
+  border-radius: 3px;
+}
+.panel .panel-heading h4 {
+  padding: 12px 8px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background: #ECECEC;
+}
+.panel .panel-body {
+  padding: 8px;
+  font-size: 16px;
+}
+.sidebar .title {
+  padding: 18px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 27px;
+}
+.sidebar .title span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.sidebar .search-field {
+  padding: 8px 0;
+}
+.sidebar .search-field .form-control {
+  border-radius: 27px;
+  border-color: #3949AB;
+}
+.sidebar #candidatesFilter {
+  height: 75%;
+}
+.sidebar #candidatesFilter .search-results {
+  padding: 8px 0;
+  height: 100%;
+}
+.sidebar #candidatesFilter .search-results .list-unstyled {
+  height: 100%;
+  overflow: scroll;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.sidebar #candidatesFilter .search-results .list-unstyled li {
+  padding: 5px 15px;
+  cursor: pointer;
+  border-top: 1px solid #6573cc;
+}
+.sidebar #candidatesFilter .search-results .list-unstyled li:hover,
+.sidebar #candidatesFilter .search-results .list-unstyled li.active {
+  background: #6573cc;
+}
+.sidebar #candidatesFilter .search-results .list-unstyled li small {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.sidebar #candidatesFilter .search-results .list-unstyled li .reference {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+.sidebar #candidatesFilter .search-results .list-unstyled li .extra-details span {
+  margin-left: 3px;
+}
+.explorer {
+  overflow: hidden;
+  color: #FFF;
+}
+.explorer #blockActivity {
+  height: 100%;
+}
+.explorer .modal {
+  color: #444;
+}
+.explorer .activities,
+.explorer .transaction-list {
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 50%;
+}
+.explorer .activities .title,
+.explorer .transaction-list .title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 8px 15px;
+  background: #3c228b;
+}
+.explorer .activities .title span,
+.explorer .transaction-list .title span {
+  margin-left: 3px;
+}
+.explorer .activities .events {
+  padding: 10px 0;
+  height: 90%;
+  overflow: scroll;
+}
+.explorer .activities .events .list-unstyled li {
+  padding: 3px 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.85em;
+  border-bottom: 1px solid #4e2cb5;
+}
+.explorer .transaction-list .transactions {
+  padding: 10px 0;
+  height: 90%;
+  overflow: scroll;
+}
+.explorer .transaction-list .transactions .list-unstyled li {
+  cursor: pointer;
+  overflow: hidden;
+  padding: 3px 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.85em;
+}
+.explorer .transaction-list .transactions .list-unstyled li .block {
+  color: #444;
+  background: #FFF;
+  padding: 2px;
+  border: 1px solid #ECECEC;
+}
+.explorer .transaction-list .transactions .list-unstyled li .number {
+  margin-left: 3px;
+}
+.explorer .transaction-list .transactions .list-unstyled li:hover,
+.explorer .transaction-list .transactions .list-unstyled li.active {
+  background: #6642d1;
+}

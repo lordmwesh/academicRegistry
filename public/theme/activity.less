@@ -1,0 +1,71 @@
+.explorer {
+    overflow: hidden;
+    color: @white;
+    #blockActivity {
+        height: 100%;
+    }
+    .modal {
+        color: @text;
+    }
+    .activities, .transaction-list {
+        margin-left: -15px;
+        margin-right: -15px;
+        height: 50%;
+        .title {
+            font-family: @font-family;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 8px 15px;
+            background: darken(@secondary, 5%);
+            span {
+                margin-left: 3px;
+            }
+        }
+    }
+
+    .activities {
+        .events {
+            padding: 10px 0;
+            height: 90%;
+            overflow: scroll;
+            .list-unstyled {
+                li {
+                    padding: 3px 15px;
+                    font-family: @font-family;
+                    font-weight: 300;
+                    font-size: 0.85em;
+                    border-bottom: 1px solid lighten(@secondary, 5%);
+                }
+            }
+        }
+    }
+    .transaction-list {
+        .transactions {
+            padding: 10px 0;
+            height: 90%;
+            overflow: scroll;
+            .list-unstyled {
+                li {
+                    cursor: pointer;
+                    overflow: hidden;
+                    padding: 3px 15px;
+                    font-family: @font-family;
+                    font-weight: 300;
+                    font-size: 0.85em;
+                    .block {
+                        color: @text;
+                        background: @white;
+                        padding: 2px;
+                        border: 1px solid @default;
+                    }
+                    .number {
+                        margin-left: 3px;
+                    }
+                    &:hover, &.active {
+                        background: lighten(@secondary, 15%);
+                    }
+                }
+            }
+        }
+    }
+}

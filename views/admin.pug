@@ -1,0 +1,17 @@
+extends layout
+
+block menu
+  include partials/admin_menu
+
+block sidebar
+  include partials/sidebar
+
+block explorer
+  include partials/blockactivity
+
+block content
+  h1= title
+  //- Load admin actions
+  include partials/admin_actions
+  //- Include candidate summary
+  include partials/candidate_summary

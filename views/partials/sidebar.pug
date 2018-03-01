@@ -1,0 +1,16 @@
+div#candidatesFilter(v-cloak)
+  div(class="title") Academic 
+    span Certificate Registry
+  
+  div(class="search-field")
+    input(type="text" class="form-control input-sm" placeholder="Search candidate" v-model="query" @keyup.enter="doSearch")
+
+  div(class="search-results")
+    div(class="list-unstyled")
+      li(v-for="candidate in candidates" @click="viewCandidate(candidate)" :class="{'active': candidate.admissionNumber == (store.state.candidate? store.state.candidate.admissionNumber: '') }") 
+        small Admission number
+        div(class="reference") {{candidate.admissionNumber}}
+        div(class="extra-details")
+          i(class="fa fa-user") 
+          span {{candidate.name}}
+  

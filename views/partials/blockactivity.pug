@@ -1,0 +1,70 @@
+div#blockActivity(v-cloak)
+  div(class="activities")
+    div(class="title") 
+      i(class="fa fa-signal")
+      span Blockchain Activity
+    div(class="events")
+        div(class="list-unstyled") 
+          li(v-for="event in events") {{event.args._msg}}
+
+  div#blockTransactions(class="transaction-list")
+    div(class="title") 
+      i(class="fa fa-search")
+      span Blockchain Explorer
+    div(class="transactions")
+        div(class="list-unstyled")
+          li(v-for="transaction in transactions", @click="viewTransaction(transaction)")
+            span(class="block") {{transaction.blockNumber}}
+            span(class="number") {{transaction.transactionHash}}
+
+        //- Transactions modal
+        b-modal(v-model="showTransactionModal", title="Transaction", v-if="active_transaction")
+          table(class="table table-sm table-responsive table-striped")
+            tbody
+              tr
+                th Transaction Hash
+                td 
+                  pre {{active_transaction.transactionHash}}
+              tr
+                th Executed By
+                td 
+                  pre {{active_transaction.address}}
+              tr
+                th Block Hash
+                td 
+                  pre {{active_transaction.blockHash}}
+              tr
+                th Block Number
+                td 
+                  pre {{active_transaction.blockNumber}}
+              tr
+                th Type
+                td 
+                  pre {{active_transaction.type}}
+              tr
+                th Log Index
+                td 
+                  pre {{active_transaction.logIndex}}
+              tr
+                th Transaction Index
+                td 
+                  pre {{active_transaction.transactionIndex}}
+              tr
+                th Topics
+                td 
+                  pre {{active_transaction.topics}}
+              tr
+                th Raw Data
+                td 
+                  pre {{active_transaction.data}}
+              tr
+                th Interpretation
+                td 
+                  pre {{active_transaction.data|toASCII}}
+          div(slot="modal-footer", class="w-100")
+            b-btn(size="sm", class="float-right", variant="default", @click="showTransactionModal=false")
+              span Close
+        </b-modal>
+
+      
+        

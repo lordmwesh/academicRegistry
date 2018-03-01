@@ -1,0 +1,860 @@
+[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "unitsList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "programCode",
+				"type": "uint256"
+			}
+		],
+		"name": "getProgramUnitsCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "destroyContract",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "admissionDate",
+				"type": "uint256"
+			},
+			{
+				"name": "totalFeesPaid",
+				"type": "uint256"
+			},
+			{
+				"name": "programCode",
+				"type": "uint256"
+			}
+		],
+		"name": "enrollCandidate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "programCode",
+				"type": "uint256"
+			},
+			{
+				"name": "unitIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "getProgramUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "candidates",
+		"outputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "admissionDate",
+				"type": "uint256"
+			},
+			{
+				"name": "totalFeesPaid",
+				"type": "uint256"
+			},
+			{
+				"name": "passedUnits",
+				"type": "uint256"
+			},
+			{
+				"name": "totalUnits",
+				"type": "uint256"
+			},
+			{
+				"name": "clearedByAdmin",
+				"type": "bool"
+			},
+			{
+				"name": "certificate",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numberOfStaff",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "unitCode",
+				"type": "uint256"
+			},
+			{
+				"name": "passed",
+				"type": "bool"
+			}
+		],
+		"name": "markUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "updateFeesPaid",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "unitCode",
+				"type": "uint256"
+			}
+		],
+		"name": "getCandidateUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numberOfPrograms",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "unitCode",
+				"type": "uint256"
+			}
+		],
+		"name": "registerCandidateUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numberOfUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "memberAddress",
+				"type": "address"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "memberSince",
+				"type": "uint256"
+			},
+			{
+				"name": "permission",
+				"type": "uint8"
+			}
+		],
+		"name": "addStaff",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "certificateHash",
+				"type": "string"
+			}
+		],
+		"name": "updateCertDocumentHash",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "requiredMiniumUnits",
+				"type": "uint256"
+			},
+			{
+				"name": "requiredMinimumDuration",
+				"type": "uint256"
+			},
+			{
+				"name": "totalCost",
+				"type": "uint256"
+			}
+		],
+		"name": "addProgram",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "staffAddresses",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "programs",
+		"outputs": [
+			{
+				"name": "code",
+				"type": "uint256"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "requiredMiniumUnits",
+				"type": "uint256"
+			},
+			{
+				"name": "totalCost",
+				"type": "uint256"
+			},
+			{
+				"name": "requiredMinimumDuration",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "candidateUnits",
+		"outputs": [
+			{
+				"name": "passed",
+				"type": "bool"
+			},
+			{
+				"name": "unit_code",
+				"type": "uint256"
+			},
+			{
+				"name": "marked",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numberOfCandidates",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"name": "addUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "getCandidateProgram",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			},
+			{
+				"name": "cleared",
+				"type": "bool"
+			}
+		],
+		"name": "clearCandidate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "staffs",
+		"outputs": [
+			{
+				"name": "member",
+				"type": "address"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "memberSince",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "unitCode",
+				"type": "uint256"
+			},
+			{
+				"name": "programCode",
+				"type": "uint256"
+			}
+		],
+		"name": "appendUnitToProgram",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "issueCertificate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "getFeesBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "admissionNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "numberOfCandidateUnits",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "candidatesList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "units",
+		"outputs": [
+			{
+				"name": "code",
+				"type": "uint256"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "memberAddress",
+				"type": "address"
+			},
+			{
+				"name": "permission",
+				"type": "uint8"
+			}
+		],
+		"name": "updatePermissions",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "programList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "memberAddress",
+				"type": "address"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "memberSince",
+				"type": "uint256"
+			},
+			{
+				"name": "permission",
+				"type": "uint8"
+			}
+		],
+		"name": "addSuperAdmin",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_msg",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_subject",
+				"type": "address"
+			}
+		],
+		"name": "TrackStaffChanges",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_msg",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_subject",
+				"type": "uint256"
+			}
+		],
+		"name": "TrackCandidateChanges",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_msg",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_subject",
+				"type": "string"
+			}
+		],
+		"name": "TrackProgramChanges",
+		"type": "event"
+	}
+]

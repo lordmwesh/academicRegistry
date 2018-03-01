@@ -1,0 +1,6 @@
+nav#staffNav(v-cloak, class='navbar navbar-expand-lg navbar-light bg-light justify-content-between')
+  a(class='navbar-brand' href='/admin') {{title}}
+  form(class="form-inline")
+      select(class="form-control mr-sm-2" v-model="active_user")
+        option(value="", selected) Choose account
+        option(v-for="staff in staffs", :value="staff.memberAddress") {{staff.name}}

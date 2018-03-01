@@ -1,0 +1,15 @@
+extends layout
+
+block menu
+  div
+
+block sidebar
+  include partials/sidebar
+
+block explorer
+  include partials/blockactivity
+
+block content
+  h1= title
+  //- Include candidate summary
+  include partials/candidate_summary

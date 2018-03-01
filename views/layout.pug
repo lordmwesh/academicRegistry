@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title= title
+    link(
+      rel='stylesheet', 
+      href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css'
+      integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" 
+      crossorigin="anonymous"
+    )
+    link(rel="stylesheet", href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='wrapper row')
+      div(class='sidebar col-2')
+        block sidebar
+      div(class='main-content col-8')
+        block menu
+        block content
+      div(class='explorer col-2')
+        block explorer
+    
+    //- Add main scripts
+    script(src='https://cdn.jsdelivr.net/npm/vue')
+    script(src='https://unpkg.com/vuex@3.0.1/dist/vuex.js')
+    script(src='https://unpkg.com/axios/dist/axios.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/mouse0270-bootstrap-notify/3.1.7/bootstrap-notify.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js')
+    script(src='//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js')
+    script(src='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js')
+
+    //- Add vue scripts
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/store.js')
+    script(src='/javascripts/components/CandidatesFilter.js')
+    script(src='/javascripts/components/AdminClearanceForm.js')
+    script(src='/javascripts/components/UpdateFeesForm.js')
+
+    script(src='/javascripts/components/CandidateSelectUnits.js')
+    script(src='/javascripts/components/CandidateUnitList.js')
+    script(src='/javascripts/components/CandidatesList.js')
+    script(src='/javascripts/components/EnrollStudentForm.js')
+    script(src='/javascripts/components/CandidateSummary.js')
+    script(src='/javascripts/components/Candidates.js')
+
+    script(src='/javascripts/components/ProgramUnitList.js')
+    script(src='/javascripts/components/Programs.js')
+    script(src='/javascripts/components/ProgramList.js')
+    script(src='/javascripts/components/AddProgramForm.js')
+
+    script(src='/javascripts/components/Staffs.js')
+    script(src='/javascripts/components/StaffsList.js')
+    script(src='/javascripts/components/AddStaffForm.js')
+    script(src='/javascripts/components/AddUnitForm.js')
+    script(src='/javascripts/components/BlockActivity.js')
+    script(src='/javascripts/components/StaffActions.js')
+    script(src='/javascripts/components/StaffNav.js')
